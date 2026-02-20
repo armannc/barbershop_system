@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<!-- Контейнер для барберов -->
+<div class="container">
+  <h2>Админ панель</h2>
+
+  <input type="text" id="newBarberName" placeholder="Имя барбера">
+  <input type="number" id="barberExperience" placeholder="Стаж (год)" min="0">
+
+  <button onclick="addBarber()">Добавить барбера</button>
+
+  <h3>Список барберов</h3>
+  <div id="barberList"></div>
+</div>
+
+<!-- Контейнер для записей клиентов -->
+<div class="container">
+  <h3>Записи клиентов</h3>
+  <div id="bookingList"></div>
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>

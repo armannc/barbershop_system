@@ -1,0 +1,158 @@
+/* Общие стили */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #111, #1c1c1c);
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column; /* блоктарды бір бағанға қою */
+  padding: 40px 0;
+}
+
+/* Контейнер */
+.container {
+  display: block; /* блок ретінде */
+  width: 600px;
+  max-width: 95%;
+  margin: 20px auto; /* ортасына орналастыру */
+  padding: 30px 40px;
+  border-radius: 20px;
+  background: #1f1f1f;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+/* Заголовки */
+h2, h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Инпуты */
+input[type="text"], input[type="number"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: none;
+  background: #2b2b2b;
+  color: white;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+input:focus {
+  background: #333;
+  transform: scale(1.02);
+}
+
+/* Кнопка добавления */
+button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(90deg, #f39c12, #e67e22);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(243,156,18,0.4);
+}
+
+/* Список барберов */
+.barber-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: #2b2b2b;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  transition: 0.3s;
+}
+
+.barber-item:hover {
+  background: #333;
+  transform: scale(1.01);
+}
+
+/* Минималистичный edit и delete */
+.edit-btn, .delete-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 5px;
+  transition: 0.2s;
+}
+
+.edit-btn:hover { color: #f1c40f; }
+.delete-btn:hover { color: #e74c3c; }
+
+/* Таблица записей клиентов */
+#bookingList table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+#bookingList th, #bookingList td {
+  border: 1px solid #444;
+  padding: 8px 10px;
+  text-align: center;
+}
+
+#bookingList th {
+  background: #333;
+  color: #f39c12;
+  font-weight: 600;
+}
+
+#bookingList tr:nth-child(even) td {
+  background: #2a2a2a;
+}
+
+#bookingList tr:nth-child(odd) td {
+  background: #222;
+}
+
+#bookingList tr:hover td {
+  background: #3a3a3a;
+  transition: 0.3s;
+}
+
+/* Адаптив */
+@media (max-width: 650px) {
+  .container {
+    width: 90%;
+    padding: 20px;
+    margin: 15px auto;
+  }
+
+  input, button {
+    padding: 10px;
+  }
+
+  .barber-item span {
+    font-size: 14px;
+  }
+
+  .edit-btn, .delete-btn {
+    font-size: 14px;
+  }
+
+  #bookingList table, #bookingList th, #bookingList td {
+    font-size: 14px;
+  }
+}
